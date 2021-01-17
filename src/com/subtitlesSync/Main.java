@@ -56,7 +56,6 @@ public class Main {
                            + ":" + (startSeconds<10 ? "0" + startSeconds : startSeconds) + data.substring(8,12) + " --> "
                            + data.substring(17,18) + endHours + ":" + (endMinutes<10 ? "0" + endMinutes : endMinutes)
                            + ":" + (endSeconds<10 ? "0" + endSeconds : endSeconds) + data.substring(25,29);
-                   System.out.println(data);
                 }
                 myWriter.write(data+"\n");
             }

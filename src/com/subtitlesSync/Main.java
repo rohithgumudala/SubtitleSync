@@ -74,9 +74,10 @@ public class Main {
             myReader.close();
             myWriter.close();
         } catch (FileNotFoundException e) {
-            System.out.println("An error occurred.");
+            System.out.println("The specified file does not exist.");
             e.printStackTrace();
         } catch (IOException e) {
+            System.out.println("An error occured. Try again.");
             e.printStackTrace();
         }
     }

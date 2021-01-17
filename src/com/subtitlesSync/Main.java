@@ -23,10 +23,22 @@ public class Main {
 
         int adjustTime = -67;
 
+        String inputFilepath = "";
+        String outputFilepath = "";
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter the input file path:" + "\n" + "Example : C:\\Users\\Downloads\\sub1.srt");
+        inputFilepath = input.nextLine();
+        System.out.println("Enter the output file path:" + "\n" + "Example : C:\\Users\\Downloads\\sub1.srt");
+        outputFilepath = input.nextLine();
+        System.out.println("Enter the time to be adjusted +ve to delay and -ve to rush:");
+        adjustTime = Integer.parseInt(input.nextLine());
+
         try {
-            File inputFile = new File("C:\\Users\\rohit\\Downloads\\1.srt");
+            File inputFile = new File(inputFilepath);
             Scanner myReader = new Scanner(inputFile);
-            File OutputFile = new File("C:\\Users\\rohit\\Downloads\\newSub.srt");
+            File OutputFile = new File(outputFilepath);
             FileWriter myWriter = new FileWriter(OutputFile);
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
